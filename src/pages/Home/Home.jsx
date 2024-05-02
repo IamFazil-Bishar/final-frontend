@@ -8,7 +8,7 @@ import { useNavigate } from "react-router-dom";
 import axiosInstance from "../../utils/axiosInstance";
 import Toast from "../../components/ToastMessage/Toast";
 import EmptyCard from "../../components/EmptyCard/EmptyCard";
-import AddNotesImg from "../../assets/react.svg"
+import AddNotesImg from "../../assets/img.png"
 
 const Home = () => {
   const [openAddEditModal, setOpenAddEditMoadal] = useState({
@@ -169,7 +169,8 @@ const Home = () => {
             ))}
           </div>
         ) : (
-          <EmptyCard imgSrc={AddNotesImg} message='start creating your first Note'/>
+          <EmptyCard imgSrc={AddNotesImg} message={<span>Write about your first <strong>destination plane</strong></span>} />
+
         )}
       </div>
 
